@@ -26,7 +26,7 @@ class KHSController {
             $this->view->renderPage($filePath);
         } else {
             // Handle the case when the email session is not set
-            $this->redirectTo('/login_controller.php');
+            $this->redirectTo('login_controller.php');
         }
     }
 
@@ -68,7 +68,7 @@ class KHSController {
                         $this->model->saveKHSPath($email, $targetFile);
 
                         // Redirect to the KHS page
-                        $this->redirectTo('/khs_controller.php');
+                        $this->redirectTo('khs_controller.php');
                     } else {
                         // Handle the case when the file upload fails
                         echo "Sorry, there was an error uploading your file.";
@@ -76,7 +76,7 @@ class KHSController {
                 }
             } else {
                 // Handle the case when the email session is not set
-                $this->redirectTo('/login_controller.php');
+                $this->redirectTo('login_controller.php');
             }
         }
     }

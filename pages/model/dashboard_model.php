@@ -24,18 +24,6 @@ class DashboardModel {
 
         return $result->fetch_assoc();
     }
-
-    public function logout() {
-        global $client;
-        //Reset OAuth access token
-        $client->revokeToken();
-
-        //Destroy entire session data.
-        session_destroy();
-
-        // Close the database connection
-        mysqli_close($this->conn);
-    }
 }
 
 ?>

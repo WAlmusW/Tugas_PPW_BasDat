@@ -12,33 +12,6 @@ class DashboardView {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-            <style>
-                body {
-                    padding: 20px;
-                }
-                .navbar {
-                    background-color: #f8f9fa;
-                }
-                .navbar-nav {
-                    width: 200px;
-                }
-                .navbar-item {
-                    padding: 10px;
-                }
-                .user-info {
-                    margin-top: 20px;
-                }
-                .profile-picture {
-                    max-width: 150px;
-                    max-height: 150px;
-                    margin-bottom: 10px;
-                }
-
-                .placeholder-block {
-                    width: 150px;
-                    height: 150px;
-                    background-color: #eee;
-            </style>
             <title>Dashboard</title>
         </head>
         <body>

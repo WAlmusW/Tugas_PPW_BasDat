@@ -1,0 +1,26 @@
+body {
+    padding: 20px;
+}
+.navbar {
+    background-color: #f8f9fa;
+}
+.navbar-nav {
+    width: 200px;
+}
+.navbar-item {
+    padding: 10px;
+}
+.user-info {
+    margin-top: 20px;
+}
+.profile-picture {
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: 10px;
+}
+
+.placeholder-block {
+    width: 150px;
+    height: 150px;
+    background-color: #eee;
+}

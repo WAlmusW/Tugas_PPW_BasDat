@@ -1,0 +1,16 @@
+body {
+    padding: 20px;
+}
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.profile-picture {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+.placeholder-block {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+}
