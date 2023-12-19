@@ -15,43 +15,62 @@ class AdminDashboardView {
             <link href="../../style/dashboard_style.css" rel="stylesheet">
             <title>Dashboard</title>
         </head>
-        <body>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                    <div class="navbar-collapse">
-                        <ul class="navbar-nav">
-                            <li class="nav-item navbar-item">
-                                <a class="nav-link" href="../controller/admin_menu_controller.php">Admin Menu</a>
-                            </li>
-                            <li class="nav-item navbar-item">
-                                <a class="nav-link" href="../controller/biodata_controller.php">Biodata</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <body class="dashboard-body">
+        <nav class="main-menu">
+                <ul>
+                    <li>
+                        <a href="../controller/admin_menu_controller.php">
+                            <i class="fa fa-home fa-2x"></i>
+                            <span class="nav-text">Admin Menu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../controller/biodata_controller.php">
+                            <i class="fa fa-user fa-2x"></i>
+                            <span class="nav-text">Biodata</span>
+                        </a>
+                    </li>
+                    <!-- Add additional menu items as needed -->
+                </ul>
+
+                <ul class="logout">
+                    <li>
+                        <a href="../controller/logout_controller.php">
+                            <i class="fa fa-power-off fa-2x"></i>
+                            <span class="nav-text">Logout</span>
+                        </a>
+                    </li>  
+                </ul>
             </nav>
 
             <div class="user-info">
                 <?php if ($userData): ?>
-                    <h2>Welcome, <?php echo $userData['name']; ?>!</h2>
-                    <p>Email: <?php echo $userData['email']; ?></p>
-                    <p>NIM: <?php echo $userData['nim']; ?></p>
-                    <p>Address: <?php echo $userData['address']; ?></p>
-                    <p>Gender: <?php echo $userData['gender']; ?></p>
-                    <p>Program Studi: <?php echo $userData['program_studi']; ?></p>
-                    <p>Fakultas: <?php echo $userData['fakultas']; ?></p>
-                    <?php if ($userData['profile_picture_path'] !== null): ?>
-                        <img src="<?php echo $userData['profile_picture_path']; ?>" alt="Profile Picture" class="profile-picture">
-                    <?php else: ?>
-                        <div class="placeholder-block"></div>
-                    <?php endif; ?>
+                    <div class="main">
+                        <div class="head">
+                            <?php if ($userData['profile_picture_path'] !== null): ?>
+                                <img src="<?php echo $userData['profile_picture_path']; ?>" alt="Profile Picture" class="profile-picture">
+                            <?php else: ?>
+                                <div class="placeholder-block"></div>
+                            <?php endif; ?>
+                            <h1><?php echo $userData['name']; ?></h1>
+                            <h4><?php echo $userData['nim']; ?></h4>
+                        </div>
+                        <div class="body">
+                            <h2>Personal Details:</h2>
+                            <ul>
+                                <li>Email: <span class="right"><?php echo $userData['email']; ?></span></li>
+                                <li>NIM: <span class="right"><?php echo $userData['nim']; ?></span></li>
+                                <li>Address: <span class="right"><?php echo $userData['address']; ?></span></li>
+                                <li>Gender: <span class="right"><?php echo $userData['gender']; ?></span></li>
+                                <li>Program Studi: <span class="right"><?php echo $userData['program_studi']; ?></span></li>
+                                <li>Fakultas: <span class="right"><?php echo $userData['fakultas']; ?></span></li>
+                                <hr>
+                            </ul>
+                        </div>
+                    </div>
                 <?php else: ?>
                     <p>Not set yet, please go to Biodata to set the information.</p>
                 <?php endif; ?>
-            </div>
-
-            <div>
-                <a href="../controller/logout_controller.php"  class="logout-button">Logout</a>    
             </div>
         </body>
         </html>
