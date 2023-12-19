@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2023 at 03:25 PM
+-- Generation Time: Dec 19, 2023 at 10:26 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,8 +40,9 @@ CREATE TABLE `user_auth` (
 --
 
 INSERT INTO `user_auth` (`user_id`, `email`, `password`, `method`, `role`) VALUES
-(4, 'abdulhalim191003@gmail.com', NULL, 'GOOGLE', 'MAHASISWA'),
-(5, 'halim@gmail.com', '12345', 'NORMAL', 'MAHASISWA');
+(1, 'dummy_admin@gmail.com', 'qwerty', 'NORMAL', 'ADMIN'),
+(2, 'dummy_mahasiswa@gmail.com', '12345', 'NORMAL', 'MAHASISWA'),
+(3, 'abdulhalim191003@gmail.com', NULL, 'GOOGLE', 'ADMIN');
 
 -- --------------------------------------------------------
 
@@ -68,8 +69,9 @@ CREATE TABLE `user_info` (
 --
 
 INSERT INTO `user_info` (`email`, `name`, `phone_number`, `address`, `nim`, `gender`, `program_studi`, `fakultas`, `profile_picture_path`, `krs_path`, `khs_path`) VALUES
-('abdulhalim191003@gmail.com', 'Halim', NULL, 'Jalan Baladewa', '1313622012', 'male', 'Bahasa Jepang', 'Agama', '../../temp/profile_picture/abdulhalim191003@gmail.com.jpg', '../../temp/KRS/abdulhalim191003@gmail.com.pdf', '../../temp/KHS/abdulhalim191003@gmail.com.pdf'),
-('halim@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '');
+('abdulhalim191003@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', ''),
+('dummy_admin@gmail.com', 'Halim', NULL, 'Jalan Baladewa', '1313622012', 'male', 'Bahasa Jepang', 'Agama', '../../temp/profile_picture/dummy_admin@gmail.com.jpg', '../../temp/KRS/dummy_admin@gmail.com.pdf', '../../temp/KHS/dummy_admin@gmail.com.pdf'),
+('dummy_mahasiswa@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '');
 
 --
 -- Indexes for dumped tables
@@ -96,7 +98,7 @@ ALTER TABLE `user_info`
 -- AUTO_INCREMENT for table `user_auth`
 --
 ALTER TABLE `user_auth`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
