@@ -32,10 +32,6 @@ class AddUserView {
                     <label for="method" class="form-label">Method</label>
                     <input type="text" class="form-control" id="method" name="method" required>
                 </div>
-                <div class="mb-3">
-                    <label for="role" class="form-label">Role</label>
-                    <input type="text" class="form-control" id="role" name="role" required>
-                </div>
                 <button type="submit" class="btn btn-success">Add User</button>
             </form>
         </body>

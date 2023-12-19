@@ -19,9 +19,21 @@ class DashboardView {
             <nav class="main-menu">
                 <ul>
                     <li>
-                        <a href="../controller/admin_menu_controller.php">
+                        <a href="#">
                             <i class="fa fa-home fa-2x"></i>
-                            <span class="nav-text">Admin Menu</span>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../controller/krs_controller.php">
+                            <i class="fa fa-file fa-2x"></i>
+                            <span class="nav-text">KRS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../controller/khs_controller.php">
+                            <i class="fa fa-file-text fa-2x"></i>
+                            <span class="nav-text">KHS</span>
                         </a>
                     </li>
                     <li>
@@ -30,7 +42,6 @@ class DashboardView {
                             <span class="nav-text">Biodata</span>
                         </a>
                     </li>
-                    <!-- Add additional menu items as needed -->
                 </ul>
 
                 <ul class="logout">

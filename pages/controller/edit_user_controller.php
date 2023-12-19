@@ -41,10 +41,9 @@ class EditUserController {
             $email = $_POST['email'];
             $password = $_POST['password'];
             $method = $_POST['method'];
-            $role = $_POST['role'];
 
             // Update the user in the model
-            $success = $this->model->updateUser($userId, $email, $password, $method, $role);
+            $success = $this->model->updateUser($userId, $email, $password, $method);
 
             if ($success) {
                 echo "User updated successfully!";

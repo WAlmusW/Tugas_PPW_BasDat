@@ -16,11 +16,17 @@ class AdminDashboardView {
             <title>Dashboard</title>
         </head>
         <body class="dashboard-body">
-        <nav class="main-menu">
+            <nav class="main-menu">
                 <ul>
                     <li>
-                        <a href="../controller/admin_menu_controller.php">
+                        <a href="#">
                             <i class="fa fa-home fa-2x"></i>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../controller/admin_menu_controller.php">
+                            <i class="fa fa-unlock-alt fa-2x"></i>
                             <span class="nav-text">Admin Menu</span>
                         </a>
                     </li>
@@ -30,9 +36,8 @@ class AdminDashboardView {
                             <span class="nav-text">Biodata</span>
                         </a>
                     </li>
-                    <!-- Add additional menu items as needed -->
                 </ul>
-
+                
                 <ul class="logout">
                     <li>
                         <a href="../controller/logout_controller.php">

@@ -23,16 +23,15 @@ class AddUserModel {
         mysqli_query($this->conn, 'SET FOREIGN_KEY_CHECKS=1');
     }
 
-    public function addUser($email, $password, $method, $role) {
+    public function addUser($email, $password, $method) {
         $email = $this->conn->real_escape_string($email);
         $password = $this->conn->real_escape_string($password);
         $method = $this->conn->real_escape_string($method);
-        $role = $this->conn->real_escape_string($role);
 
         $this->disableForeignKeyChecks();
 
         // Insert user_auth record
-        $addAuthQuery = "INSERT INTO user_auth (email, password, method, role) VALUES ('$email', '$password', '$method', '$role')";
+        $addAuthQuery = "INSERT INTO user_auth (email, password, method, role) VALUES ('$email', '$password', '$method', 'MAHASISWA')";
         $this->conn->query($addAuthQuery);
 
         // Insert user_info record

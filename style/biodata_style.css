@@ -14,3 +14,5 @@ body {
     height: 100px;
     background-color: #eee;
 }
+
+#success_message{ display: none;}

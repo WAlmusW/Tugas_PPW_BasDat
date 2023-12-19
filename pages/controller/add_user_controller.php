@@ -22,10 +22,9 @@ class AddUserController {
             $email = $_POST['email'];
             $password = $_POST['password'];
             $method = $_POST['method'];
-            $role = $_POST['role'];
 
             // Add the user to the database
-            $this->model->addUser($email, $password, $method, $role);
+            $this->model->addUser($email, $password, $method);
 
             // Redirect to AdminMenu page after adding
             header("Location: admin_menu_controller.php");
