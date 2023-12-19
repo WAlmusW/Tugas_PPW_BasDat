@@ -26,18 +26,16 @@ if (isset($_GET['code'])) {
         global $db_host, $db_username, $db_password, $db_name;
         $conn = new mysqli($db_host, $db_username, $db_password, $db_name);
 
-        if ($conn->connect_error) {
-            throw new Exception("Connection failed: " . $conn->connect_error);
-        }
-
         $queryEmail = "SELECT * FROM user_auth WHERE email = '$email'";
         $resultEmail = mysqli_query($conn, $queryEmail);
 
-        if (mysqli_num_rows($resultEmail) === 1) { // This is login  
-            header("Location: pages/controller/login_controller.php");
+        if (mysqli_num_rows($resultEmail) > 0) { // This is login  
+            $_SESSION['mode'] = "login";
+            header("Location: pages/controller/register_login_controller.php");
             exit();
         } else { // This is register
-            header("Location: pages/controller/register_controller.php");
+            $_SESSION['mode'] = "register";
+            header("Location: pages/controller/register_login_controller.php");
             exit();
         }
     }

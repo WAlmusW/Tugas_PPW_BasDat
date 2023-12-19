@@ -3,7 +3,7 @@
 require_once '../../google_config.php';
 require '../../config/db_config.php';
 
-class DashboardView {
+class AdminDashboardView {
     public function renderPage($userData) {
         ?>
         <!DOCTYPE html>
@@ -21,10 +21,7 @@ class DashboardView {
                     <div class="navbar-collapse">
                         <ul class="navbar-nav">
                             <li class="nav-item navbar-item">
-                                <a class="nav-link" href="../controller/krs_controller.php">KRS</a>
-                            </li>
-                            <li class="nav-item navbar-item">
-                                <a class="nav-link" href="../controller/khs_controller.php">KHS</a>
+                                <a class="nav-link" href="../controller/admin_menu_controller.php">Admin Menu</a>
                             </li>
                             <li class="nav-item navbar-item">
                                 <a class="nav-link" href="../controller/biodata_controller.php">Biodata</a>

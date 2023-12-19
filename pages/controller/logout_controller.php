@@ -9,7 +9,7 @@ $client->revokeToken();
 //Destroy entire session data.
 session_destroy();
 
-header("Location: login_controller.php");
+header("Location: register_login_controller.php");
 exit();
 
 ?>
